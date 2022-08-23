@@ -8,11 +8,11 @@ export class UserController {
 
   @Get()
   async findAll() {
-    return await this.userService.findAll();
+    return this.userService.findAll();
   }
 
   @Get(':id')
   async findOne(@Param('id') id: number) {
-    return await this.userService.findOne(id);
+    return this.userService.findOne(id);
   }
 }
